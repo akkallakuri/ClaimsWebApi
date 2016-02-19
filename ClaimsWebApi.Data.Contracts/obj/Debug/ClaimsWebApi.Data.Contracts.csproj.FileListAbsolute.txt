@@ -1,0 +1,7 @@
+C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Data.Contracts\bin\Debug\ClaimsWebApi.Data.Contracts.dll
+C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Data.Contracts\bin\Debug\ClaimsWebApi.Data.Contracts.pdb
+C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Data.Contracts\bin\Debug\ClaimsWebApi.Models.dll
+C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Data.Contracts\bin\Debug\ClaimsWebApi.Models.pdb
+C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Data.Contracts\obj\Debug\ClaimsWebApi.Data.Contracts.csprojResolveAssemblyReference.cache
+C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Data.Contracts\obj\Debug\ClaimsWebApi.Data.Contracts.dll
+C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Data.Contracts\obj\Debug\ClaimsWebApi.Data.Contracts.pdb

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ClaimsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CauseOfLoss">
+    <Key>
+      <PropertyRef Name="CauseOfLossCode" />
+    </Key>
+    <Property Name="CauseOfLossCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CauseOfLossDesc" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Claims">
+    <Key>
+      <PropertyRef Name="ClaimNumber" />
+    </Key>
+    <Property Name="ClaimNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ClaimantFirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClaimantLastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="StatusKey" Type="int" />
+    <Property Name="LossDate" Type="datetime" />
+    <Property Name="LossInfoKey" Type="int" />
+    <Property Name="AssignedAdjusterID" Type="int" />
+  </EntityType>
+  <EntityType Name="ClaimStatus">
+    <Key>
+      <PropertyRef Name="ClaimStatusCode" />
+    </Key>
+    <Property Name="ClaimStatusCode" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClaimStatusDesc" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LossInfoType">
+    <Key>
+      <PropertyRef Name="LossInfoKey" />
+    </Key>
+    <Property Name="LossInfoKey" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LossDescription" Type="nvarchar" MaxLength="100" />
+    <Property Name="ReportDate" Type="datetime" />
+    <Property Name="CauseOfLossKey" Type="int" />
+    <Property Name="ClaimNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Claims.dbo.VehicleDamageInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VehicleDamageInfo">
+    <Key>
+      <PropertyRef Name="ClaimNumber" />
+    </Key>
+    <Property Name="ClaimNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ModelYear" Type="int" />
+    <Property Name="MakeDescription" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModelDescription" Type="nvarchar" MaxLength="50" />
+    <Property Name="EngineDescription" Type="nvarchar(max)" />
+    <Property Name="ExteriorColor" Type="nvarchar" MaxLength="50" />
+    <Property Name="Vin" Type="nvarchar" MaxLength="100" />
+    <Property Name="LicPlate" Type="nvarchar" MaxLength="50" />
+    <Property Name="LicPlateState" Type="nvarchar" MaxLength="50" />
+    <Property Name="LicPlateExpDate" Type="datetime" />
+    <Property Name="DamageDescription" Type="nvarchar(max)" />
+    <Property Name="Mileage" Type="int" />
+  </EntityType>
+  <Association Name="FK_Claims_LossInfoKey">
+    <End Role="LossInfoType" Type="Self.LossInfoType" Multiplicity="0..1" />
+    <End Role="Claims" Type="Self.Claims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LossInfoType">
+        <PropertyRef Name="LossInfoKey" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="LossInfoKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Claims_StatusKey">
+    <End Role="ClaimStatus" Type="Self.ClaimStatus" Multiplicity="0..1" />
+    <End Role="Claims" Type="Self.Claims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClaimStatus">
+        <PropertyRef Name="ClaimStatusCode" />
+      </Principal>
+      <Dependent Role="Claims">
+        <PropertyRef Name="StatusKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LossInfoType_CauseOfLossKey">
+    <End Role="CauseOfLoss" Type="Self.CauseOfLoss" Multiplicity="0..1" />
+    <End Role="LossInfoType" Type="Self.LossInfoType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CauseOfLoss">
+        <PropertyRef Name="CauseOfLossCode" />
+      </Principal>
+      <Dependent Role="LossInfoType">
+        <PropertyRef Name="CauseOfLossKey" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VehicleDamageInfo_ClaimNumber">
+    <End Role="Claims" Type="Self.Claims" Multiplicity="1" />
+    <End Role="VehicleDamageInfo" Type="Self.VehicleDamageInfo" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Claims">
+        <PropertyRef Name="ClaimNumber" />
+      </Principal>
+      <Dependent Role="VehicleDamageInfo">
+        <PropertyRef Name="ClaimNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ClaimsModelStoreContainer">
+    <EntitySet Name="CauseOfLoss" EntityType="Self.CauseOfLoss" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Claims" EntityType="Self.Claims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClaimStatus" EntityType="Self.ClaimStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LossInfoType" EntityType="Self.LossInfoType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VehicleDamageInfo" EntityType="Self.VehicleDamageInfo" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VehicleDamageInfo].[ClaimNumber] AS [ClaimNumber], 
+    [VehicleDamageInfo].[ModelYear] AS [ModelYear], 
+    [VehicleDamageInfo].[MakeDescription] AS [MakeDescription], 
+    [VehicleDamageInfo].[ModelDescription] AS [ModelDescription], 
+    [VehicleDamageInfo].[EngineDescription] AS [EngineDescription], 
+    [VehicleDamageInfo].[ExteriorColor] AS [ExteriorColor], 
+    [VehicleDamageInfo].[Vin] AS [Vin], 
+    [VehicleDamageInfo].[LicPlate] AS [LicPlate], 
+    [VehicleDamageInfo].[LicPlateState] AS [LicPlateState], 
+    [VehicleDamageInfo].[LicPlateExpDate] AS [LicPlateExpDate], 
+    [VehicleDamageInfo].[DamageDescription] AS [DamageDescription], 
+    [VehicleDamageInfo].[Mileage] AS [Mileage]
+    FROM [dbo].[VehicleDamageInfo] AS [VehicleDamageInfo]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Claims_LossInfoKey" Association="Self.FK_Claims_LossInfoKey">
+      <End Role="LossInfoType" EntitySet="LossInfoType" />
+      <End Role="Claims" EntitySet="Claims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Claims_StatusKey" Association="Self.FK_Claims_StatusKey">
+      <End Role="ClaimStatus" EntitySet="ClaimStatus" />
+      <End Role="Claims" EntitySet="Claims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LossInfoType_CauseOfLossKey" Association="Self.FK_LossInfoType_CauseOfLossKey">
+      <End Role="CauseOfLoss" EntitySet="CauseOfLoss" />
+      <End Role="LossInfoType" EntitySet="LossInfoType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VehicleDamageInfo_ClaimNumber" Association="Self.FK_VehicleDamageInfo_ClaimNumber">
+      <End Role="Claims" EntitySet="Claims" />
+      <End Role="VehicleDamageInfo" EntitySet="VehicleDamageInfo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

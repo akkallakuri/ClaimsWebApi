@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsWebApi", "ClaimsWebApi\ClaimsWebApi.csproj", "{C5B407B5-EDCC-4A08-B08B-FDEF9167E8A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsWebApi.Tests", "ClaimsWebApi.Tests\ClaimsWebApi.Tests.csproj", "{06582180-4285-454F-BC4A-52173EDC9AE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsWebApi.Data.Contracts", "ClaimsWebApi.Data.Contracts\ClaimsWebApi.Data.Contracts.csproj", "{1AA1AF0C-9413-4F83-9590-A8D70A55860A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsWebApi.Models", "ClaimsWebApi.Models\ClaimsWebApi.Models.csproj", "{F1F393EE-2163-4934-A285-2C1F1BA7E03B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsWebApi.Services", "ClaimsWebApi.Services\ClaimsWebApi.Services.csproj", "{EB94D554-16C4-43D4-96DA-C2BFDE655754}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsWebApi.Services.Contracts", "ClaimsWebApi.Services.Contracts\ClaimsWebApi.Services.Contracts.csproj", "{845AD894-1D7D-43DE-B166-9E3FE531C6D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsWebApi.Data", "ClaimsWebApi.Data\ClaimsWebApi.Data.csproj", "{C22F2E8F-1B29-49E1-9FDE-F211F19F3643}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5B407B5-EDCC-4A08-B08B-FDEF9167E8A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5B407B5-EDCC-4A08-B08B-FDEF9167E8A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5B407B5-EDCC-4A08-B08B-FDEF9167E8A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5B407B5-EDCC-4A08-B08B-FDEF9167E8A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06582180-4285-454F-BC4A-52173EDC9AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06582180-4285-454F-BC4A-52173EDC9AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06582180-4285-454F-BC4A-52173EDC9AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06582180-4285-454F-BC4A-52173EDC9AE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AA1AF0C-9413-4F83-9590-A8D70A55860A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA1AF0C-9413-4F83-9590-A8D70A55860A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA1AF0C-9413-4F83-9590-A8D70A55860A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA1AF0C-9413-4F83-9590-A8D70A55860A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1F393EE-2163-4934-A285-2C1F1BA7E03B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F393EE-2163-4934-A285-2C1F1BA7E03B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F393EE-2163-4934-A285-2C1F1BA7E03B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F393EE-2163-4934-A285-2C1F1BA7E03B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB94D554-16C4-43D4-96DA-C2BFDE655754}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB94D554-16C4-43D4-96DA-C2BFDE655754}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB94D554-16C4-43D4-96DA-C2BFDE655754}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB94D554-16C4-43D4-96DA-C2BFDE655754}.Release|Any CPU.Build.0 = Release|Any CPU
+		{845AD894-1D7D-43DE-B166-9E3FE531C6D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{845AD894-1D7D-43DE-B166-9E3FE531C6D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{845AD894-1D7D-43DE-B166-9E3FE531C6D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{845AD894-1D7D-43DE-B166-9E3FE531C6D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C22F2E8F-1B29-49E1-9FDE-F211F19F3643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C22F2E8F-1B29-49E1-9FDE-F211F19F3643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C22F2E8F-1B29-49E1-9FDE-F211F19F3643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C22F2E8F-1B29-49E1-9FDE-F211F19F3643}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45
+	EndGlobalSection
+EndGlobal

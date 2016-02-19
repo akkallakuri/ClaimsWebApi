@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ClaimsModelStoreContainer" CdmEntityContainer="ClaimsEntities">
+    <EntitySetMapping Name="CauseOfLosses">
+      <EntityTypeMapping TypeName="ClaimsModel.CauseOfLoss">
+        <MappingFragment StoreEntitySet="CauseOfLoss">
+          <ScalarProperty Name="CauseOfLossCode" ColumnName="CauseOfLossCode" />
+          <ScalarProperty Name="CauseOfLossDesc" ColumnName="CauseOfLossDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Claims">
+      <EntityTypeMapping TypeName="ClaimsModel.Claim">
+        <MappingFragment StoreEntitySet="Claims">
+          <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+          <ScalarProperty Name="ClaimantFirstName" ColumnName="ClaimantFirstName" />
+          <ScalarProperty Name="ClaimantLastName" ColumnName="ClaimantLastName" />
+          <ScalarProperty Name="StatusKey" ColumnName="StatusKey" />
+          <ScalarProperty Name="LossDate" ColumnName="LossDate" />
+          <ScalarProperty Name="LossInfoKey" ColumnName="LossInfoKey" />
+          <ScalarProperty Name="AssignedAdjusterID" ColumnName="AssignedAdjusterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClaimStatus">
+      <EntityTypeMapping TypeName="ClaimsModel.ClaimStatu">
+        <MappingFragment StoreEntitySet="ClaimStatus">
+          <ScalarProperty Name="ClaimStatusCode" ColumnName="ClaimStatusCode" />
+          <ScalarProperty Name="ClaimStatusDesc" ColumnName="ClaimStatusDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LossInfoTypes">
+      <EntityTypeMapping TypeName="ClaimsModel.LossInfoType">
+        <MappingFragment StoreEntitySet="LossInfoType">
+          <ScalarProperty Name="LossInfoKey" ColumnName="LossInfoKey" />
+          <ScalarProperty Name="LossDescription" ColumnName="LossDescription" />
+          <ScalarProperty Name="ReportDate" ColumnName="ReportDate" />
+          <ScalarProperty Name="CauseOfLossKey" ColumnName="CauseOfLossKey" />
+          <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VehicleDamageInfoes">
+      <EntityTypeMapping TypeName="ClaimsModel.VehicleDamageInfo">
+        <MappingFragment StoreEntitySet="VehicleDamageInfo">
+          <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+          <ScalarProperty Name="ModelYear" ColumnName="ModelYear" />
+          <ScalarProperty Name="MakeDescription" ColumnName="MakeDescription" />
+          <ScalarProperty Name="ModelDescription" ColumnName="ModelDescription" />
+          <ScalarProperty Name="EngineDescription" ColumnName="EngineDescription" />
+          <ScalarProperty Name="ExteriorColor" ColumnName="ExteriorColor" />
+          <ScalarProperty Name="Vin" ColumnName="Vin" />
+          <ScalarProperty Name="LicPlate" ColumnName="LicPlate" />
+          <ScalarProperty Name="LicPlateState" ColumnName="LicPlateState" />
+          <ScalarProperty Name="LicPlateExpDate" ColumnName="LicPlateExpDate" />
+          <ScalarProperty Name="DamageDescription" ColumnName="DamageDescription" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
