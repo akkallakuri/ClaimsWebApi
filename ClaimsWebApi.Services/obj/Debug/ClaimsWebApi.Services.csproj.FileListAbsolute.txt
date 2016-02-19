@@ -1,4 +1,3 @@
-C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Services\obj\Debug\ClaimsWebApi.Services.csprojResolveAssemblyReference.cache
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Services\bin\Debug\ClaimsWebApi.Services.dll
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Services\bin\Debug\ClaimsWebApi.Services.pdb
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Services\bin\Debug\ClaimsWebApi.Data.Contracts.dll
@@ -12,5 +11,6 @@ C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Services\bin\D
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Services\bin\Debug\ClaimsWebApi.Services.Contracts.pdb
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Services\bin\Debug\Dapper.pdb
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Services\bin\Debug\Dapper.xml
+C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Services\obj\Debug\ClaimsWebApi.Services.csprojResolveAssemblyReference.cache
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Services\obj\Debug\ClaimsWebApi.Services.dll
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Services\obj\Debug\ClaimsWebApi.Services.pdb

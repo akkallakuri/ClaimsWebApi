@@ -27,8 +27,8 @@ C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debu
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\Microsoft.Owin.dll
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\Owin.dll
-C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\Microsoft.Owin.Security.dll
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\Microsoft.Owin.Security.dll
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\Microsoft.Practices.Unity.dll
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\Unity.WebApi.dll
@@ -58,8 +58,8 @@ C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debu
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\System.Web.Optimization.xml
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\Microsoft.Owin.xml
-C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\Microsoft.Owin.Security.xml
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\Microsoft.Owin.Security.xml
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\Microsoft.Practices.Unity.xml
 C:\Users\Anil\Documents\GitHub\Mitchell\ClaimsWebApi\ClaimsWebApi.Tests\bin\Debug\System.Web.Http.Owin.xml
