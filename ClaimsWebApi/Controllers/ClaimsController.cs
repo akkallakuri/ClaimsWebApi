@@ -21,6 +21,12 @@ namespace ClaimsWebApi.Controllers
         }
         async public Task<IHttpActionResult> Post(MitchellClaimType claim)
         {
+            if(string.IsNullOrEmpty(claim.ClaimNumber))
+                return BadRequest("ClaimNumber is required");
+
+            if (claim.Vehicles == null)
+                return BadRequest("Vehicle Details not availble in input request");
+
             return Ok(await _claimsService.CreateClaim(claim));
         }
 
@@ -56,6 +62,9 @@ namespace ClaimsWebApi.Controllers
 
         async public Task<IHttpActionResult> Put(MitchellClaimType claim)
         {
+            if (string.IsNullOrEmpty(claim.ClaimNumber))
+                return BadRequest("ClaimNumber is required.");
+
             return Ok(await _claimsService.UpdateClaim(claim));
             
         }

@@ -104,9 +104,9 @@ namespace ClaimsWebApi.Data
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                string s = ex.ToString();
+
             }
             return claims.AsEnumerable();
         }
@@ -124,7 +124,7 @@ namespace ClaimsWebApi.Data
                         DynamicParameters claimParams = new DynamicParameters();
                         claimParams.Add("@ClaimNumber", claim.ClaimNumber);
                         IEnumerable<MitchellClaimType> claimFound = await conn.QueryAsync<MitchellClaimType>(string.Format(Commands.GetClaimByClaimNumber, claim.ClaimNumber));
-                        if (claimFound == null)
+                        if (claimFound.Count<MitchellClaimType>() == 0)
                             return "Claim does not found.";
 
                         claimParams.Add("@ClaimantFirstName", claim.ClaimantFirstName);
@@ -159,7 +159,7 @@ namespace ClaimsWebApi.Data
                                 vehicleParams.Add("@ClaimNumber", claim.ClaimNumber);
                                 // assumed update claim does not have a new vehicle.
                                 IEnumerable<MitchellClaimType> claimByVin = await conn.QueryAsync<MitchellClaimType>(string.Format(Commands.GetVehicleDetailsByClaimVin, claim.ClaimNumber, v.Vin));
-                                if (claimByVin == null)
+                                if (claimFound.Count<MitchellClaimType>() == 0)
                                 {
                                     scope.Dispose();
                                     return "No vehicle exists with this Vin:" + v.Vin;
@@ -200,6 +200,13 @@ namespace ClaimsWebApi.Data
                     using (var conn = new SqlConnection(ConnectionString))
                     {
                         conn.Open();
+                        IEnumerable<MitchellClaimType> claimFound = await conn.QueryAsync<MitchellClaimType>(string.Format(Commands.GetClaimByClaimNumber, ClaimNumber));
+                        if (claimFound.Count<MitchellClaimType>() == 0)
+                        {
+                            scope.Dispose();
+                            return "Claim does not found.";
+                        }
+                        
                         DynamicParameters claimParams = new DynamicParameters();
                         claimParams.Add("@ClaimNumber", ClaimNumber);
                         await conn.ExecuteAsync(Commands.DeleteClaim, claimParams);
